@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		99B801611BE4E8F500AF2A8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B801601BE4E8F500AF2A8B /* main.m */; };
+		99B801641BE4E8F500AF2A8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B801631BE4E8F500AF2A8B /* AppDelegate.m */; };
+		99B801671BE4E8F500AF2A8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B801661BE4E8F500AF2A8B /* ViewController.m */; };
+		99B8016A1BE4E8F500AF2A8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B801681BE4E8F500AF2A8B /* Main.storyboard */; };
+		99B8016C1BE4E8F500AF2A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B8016B1BE4E8F500AF2A8B /* Assets.xcassets */; };
+		99B8016F1BE4E8F500AF2A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B8016D1BE4E8F500AF2A8B /* LaunchScreen.storyboard */; };
+		99B8017A1BE4E8F500AF2A8B /* ecomhackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B801791BE4E8F500AF2A8B /* ecomhackTests.m */; };
+		99B801851BE4E8F500AF2A8B /* ecomhackUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B801841BE4E8F500AF2A8B /* ecomhackUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99B801761BE4E8F500AF2A8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99B801541BE4E8F500AF2A8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99B8015B1BE4E8F500AF2A8B;
+			remoteInfo = ecomhack;
+		};
+		99B801811BE4E8F500AF2A8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99B801541BE4E8F500AF2A8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99B8015B1BE4E8F500AF2A8B;
+			remoteInfo = ecomhack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		99B8015C1BE4E8F500AF2A8B /* ecomhack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ecomhack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99B801601BE4E8F500AF2A8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		99B801621BE4E8F500AF2A8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		99B801631BE4E8F500AF2A8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		99B801651BE4E8F500AF2A8B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		99B801661BE4E8F500AF2A8B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		99B801691BE4E8F500AF2A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99B8016B1BE4E8F500AF2A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99B8016E1BE4E8F500AF2A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99B801701BE4E8F500AF2A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99B801751BE4E8F500AF2A8B /* ecomhackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ecomhackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99B801791BE4E8F500AF2A8B /* ecomhackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ecomhackTests.m; sourceTree = "<group>"; };
+		99B8017B1BE4E8F500AF2A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99B801801BE4E8F500AF2A8B /* ecomhackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ecomhackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99B801841BE4E8F500AF2A8B /* ecomhackUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ecomhackUITests.m; sourceTree = "<group>"; };
+		99B801861BE4E8F500AF2A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99B801591BE4E8F500AF2A8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99B801721BE4E8F500AF2A8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99B8017D1BE4E8F500AF2A8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99B801531BE4E8F500AF2A8B = {
+			isa = PBXGroup;
+			children = (
+				99B8015E1BE4E8F500AF2A8B /* ecomhack */,
+				99B801781BE4E8F500AF2A8B /* ecomhackTests */,
+				99B801831BE4E8F500AF2A8B /* ecomhackUITests */,
+				99B8015D1BE4E8F500AF2A8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99B8015D1BE4E8F500AF2A8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99B8015C1BE4E8F500AF2A8B /* ecomhack.app */,
+				99B801751BE4E8F500AF2A8B /* ecomhackTests.xctest */,
+				99B801801BE4E8F500AF2A8B /* ecomhackUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99B8015E1BE4E8F500AF2A8B /* ecomhack */ = {
+			isa = PBXGroup;
+			children = (
+				99B801621BE4E8F500AF2A8B /* AppDelegate.h */,
+				99B801631BE4E8F500AF2A8B /* AppDelegate.m */,
+				99B801651BE4E8F500AF2A8B /* ViewController.h */,
+				99B801661BE4E8F500AF2A8B /* ViewController.m */,
+				99B801681BE4E8F500AF2A8B /* Main.storyboard */,
+				99B8016B1BE4E8F500AF2A8B /* Assets.xcassets */,
+				99B8016D1BE4E8F500AF2A8B /* LaunchScreen.storyboard */,
+				99B801701BE4E8F500AF2A8B /* Info.plist */,
+				99B8015F1BE4E8F500AF2A8B /* Supporting Files */,
+			);
+			path = ecomhack;
+			sourceTree = "<group>";
+		};
+		99B8015F1BE4E8F500AF2A8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				99B801601BE4E8F500AF2A8B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99B801781BE4E8F500AF2A8B /* ecomhackTests */ = {
+			isa = PBXGroup;
+			children = (
+				99B801791BE4E8F500AF2A8B /* ecomhackTests.m */,
+				99B8017B1BE4E8F500AF2A8B /* Info.plist */,
+			);
+			path = ecomhackTests;
+			sourceTree = "<group>";
+		};
+		99B801831BE4E8F500AF2A8B /* ecomhackUITests */ = {
+			isa = PBXGroup;
+			children = (
+				99B801841BE4E8F500AF2A8B /* ecomhackUITests.m */,
+				99B801861BE4E8F500AF2A8B /* Info.plist */,
+			);
+			path = ecomhackUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99B8015B1BE4E8F500AF2A8B /* ecomhack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99B801891BE4E8F500AF2A8B /* Build configuration list for PBXNativeTarget "ecomhack" */;
+			buildPhases = (
+				99B801581BE4E8F500AF2A8B /* Sources */,
+				99B801591BE4E8F500AF2A8B /* Frameworks */,
+				99B8015A1BE4E8F500AF2A8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ecomhack;
+			productName = ecomhack;
+			productReference = 99B8015C1BE4E8F500AF2A8B /* ecomhack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		99B801741BE4E8F500AF2A8B /* ecomhackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99B8018C1BE4E8F500AF2A8B /* Build configuration list for PBXNativeTarget "ecomhackTests" */;
+			buildPhases = (
+				99B801711BE4E8F500AF2A8B /* Sources */,
+				99B801721BE4E8F500AF2A8B /* Frameworks */,
+				99B801731BE4E8F500AF2A8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99B801771BE4E8F500AF2A8B /* PBXTargetDependency */,
+			);
+			name = ecomhackTests;
+			productName = ecomhackTests;
+			productReference = 99B801751BE4E8F500AF2A8B /* ecomhackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		99B8017F1BE4E8F500AF2A8B /* ecomhackUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99B8018F1BE4E8F500AF2A8B /* Build configuration list for PBXNativeTarget "ecomhackUITests" */;
+			buildPhases = (
+				99B8017C1BE4E8F500AF2A8B /* Sources */,
+				99B8017D1BE4E8F500AF2A8B /* Frameworks */,
+				99B8017E1BE4E8F500AF2A8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99B801821BE4E8F500AF2A8B /* PBXTargetDependency */,
+			);
+			name = ecomhackUITests;
+			productName = ecomhackUITests;
+			productReference = 99B801801BE4E8F500AF2A8B /* ecomhackUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99B801541BE4E8F500AF2A8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Laura Luiz";
+				TargetAttributes = {
+					99B8015B1BE4E8F500AF2A8B = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					99B801741BE4E8F500AF2A8B = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 99B8015B1BE4E8F500AF2A8B;
+					};
+					99B8017F1BE4E8F500AF2A8B = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 99B8015B1BE4E8F500AF2A8B;
+					};
+				};
+			};
+			buildConfigurationList = 99B801571BE4E8F500AF2A8B /* Build configuration list for PBXProject "ecomhack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 99B801531BE4E8F500AF2A8B;
+			productRefGroup = 99B8015D1BE4E8F500AF2A8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99B8015B1BE4E8F500AF2A8B /* ecomhack */,
+				99B801741BE4E8F500AF2A8B /* ecomhackTests */,
+				99B8017F1BE4E8F500AF2A8B /* ecomhackUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99B8015A1BE4E8F500AF2A8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99B8016F1BE4E8F500AF2A8B /* LaunchScreen.storyboard in Resources */,
+				99B8016C1BE4E8F500AF2A8B /* Assets.xcassets in Resources */,
+				99B8016A1BE4E8F500AF2A8B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99B801731BE4E8F500AF2A8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99B8017E1BE4E8F500AF2A8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99B801581BE4E8F500AF2A8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99B801671BE4E8F500AF2A8B /* ViewController.m in Sources */,
+				99B801641BE4E8F500AF2A8B /* AppDelegate.m in Sources */,
+				99B801611BE4E8F500AF2A8B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99B801711BE4E8F500AF2A8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99B8017A1BE4E8F500AF2A8B /* ecomhackTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99B8017C1BE4E8F500AF2A8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99B801851BE4E8F500AF2A8B /* ecomhackUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99B801771BE4E8F500AF2A8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99B8015B1BE4E8F500AF2A8B /* ecomhack */;
+			targetProxy = 99B801761BE4E8F500AF2A8B /* PBXContainerItemProxy */;
+		};
+		99B801821BE4E8F500AF2A8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99B8015B1BE4E8F500AF2A8B /* ecomhack */;
+			targetProxy = 99B801811BE4E8F500AF2A8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99B801681BE4E8F500AF2A8B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99B801691BE4E8F500AF2A8B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99B8016D1BE4E8F500AF2A8B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99B8016E1BE4E8F500AF2A8B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99B801871BE4E8F500AF2A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		99B801881BE4E8F500AF2A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99B8018A1BE4E8F500AF2A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ecomhack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lauraluiz.ecomhack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		99B8018B1BE4E8F500AF2A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ecomhack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lauraluiz.ecomhack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		99B8018D1BE4E8F500AF2A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ecomhackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lauraluiz.ecomhackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ecomhack.app/ecomhack";
+			};
+			name = Debug;
+		};
+		99B8018E1BE4E8F500AF2A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ecomhackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lauraluiz.ecomhackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ecomhack.app/ecomhack";
+			};
+			name = Release;
+		};
+		99B801901BE4E8F500AF2A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ecomhackUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lauraluiz.ecomhackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ecomhack;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		99B801911BE4E8F500AF2A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ecomhackUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lauraluiz.ecomhackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ecomhack;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99B801571BE4E8F500AF2A8B /* Build configuration list for PBXProject "ecomhack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99B801871BE4E8F500AF2A8B /* Debug */,
+				99B801881BE4E8F500AF2A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99B801891BE4E8F500AF2A8B /* Build configuration list for PBXNativeTarget "ecomhack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99B8018A1BE4E8F500AF2A8B /* Debug */,
+				99B8018B1BE4E8F500AF2A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		99B8018C1BE4E8F500AF2A8B /* Build configuration list for PBXNativeTarget "ecomhackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99B8018D1BE4E8F500AF2A8B /* Debug */,
+				99B8018E1BE4E8F500AF2A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		99B8018F1BE4E8F500AF2A8B /* Build configuration list for PBXNativeTarget "ecomhackUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99B801901BE4E8F500AF2A8B /* Debug */,
+				99B801911BE4E8F500AF2A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99B801541BE4E8F500AF2A8B /* Project object */;
+}
