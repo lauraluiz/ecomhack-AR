@@ -6,10 +6,30 @@
 //  Copyright © 2015 Laura Luiz. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController
+#import "ARView.h"
+#import "DataController.h"
+
+@interface ViewController : UIViewController <ARViewDelegate, DataControllerDelegate, MKMapViewDelegate>
+{
+    
+    DataController *dataController;
+    IBOutlet MKMapView *_mapView;
+    
+    IBOutlet UIActivityIndicatorView *loadingI;
+    
+    IBOutlet UILabel *statusL;
+    IBOutlet UISwitch *prarSwitch;
+    IBOutlet UIButton *arB;
+    
+    NSArray *arData;
+    
+    NSTimer *locRefreshTimer;
+}
+
+
+-(IBAction)startPRAR:(id)sender;
 
 
 @end
-
