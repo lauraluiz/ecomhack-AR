@@ -1,10 +1,13 @@
 PODS:
+  - Alamofire (3.1.0)
   - PRAugmentedReality (3.1.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.0)
   - PRAugmentedReality
 
 SPEC CHECKSUMS:
+  Alamofire: 415bd7f56197722978759078486689f7ef913dce
   PRAugmentedReality: a9bb0e0cf4ea2ab95f29696dfba0516c10ea0148
 
 COCOAPODS: 0.39.0

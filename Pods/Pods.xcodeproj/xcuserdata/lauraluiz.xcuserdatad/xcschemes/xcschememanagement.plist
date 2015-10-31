@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PRAugmentedReality.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>57D58F1D6080970579F5CE8DC826FA10</key>
+		<key>18FD51AF29BE3BDE9E3C8F9E115C622A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A5B17AAB0880C75898985F3CCB1CE870</key>
+		<key>432ECC54282C84882B482CCB4CF227FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A2EEB583C75D74CC47D03F9A44278EFA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

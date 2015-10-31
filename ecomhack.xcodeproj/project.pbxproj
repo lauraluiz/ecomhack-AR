@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		797D72D7A7D733B7FA823D31 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F54C3FA5C8BC66E6771501 /* libPods.a */; };
 		99B801611BE4E8F500AF2A8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B801601BE4E8F500AF2A8B /* main.m */; };
 		99B801641BE4E8F500AF2A8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B801631BE4E8F500AF2A8B /* AppDelegate.m */; };
 		99B801671BE4E8F500AF2A8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B801661BE4E8F500AF2A8B /* ViewController.m */; };
@@ -30,6 +29,12 @@
 		99F040B81BE52A3C00A9497A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99F040B51BE52A3C00A9497A /* Default@2x.png */; };
 		99F040BA1BE5371600A9497A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F040B91BE5371600A9497A /* CoreLocation.framework */; };
 		99F040BC1BE537A800A9497A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F040BB1BE537A800A9497A /* Foundation.framework */; };
+		99F040C21BE5581000A9497A /* Carts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F040BE1BE5581000A9497A /* Carts.swift */; };
+		99F040C31BE5581000A9497A /* CTPOAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F040BF1BE5581000A9497A /* CTPOAuthToken.swift */; };
+		99F040C41BE5581000A9497A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F040C01BE5581000A9497A /* Endpoint.swift */; };
+		99F040C51BE5581000A9497A /* ProductProjections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F040C11BE5581000A9497A /* ProductProjections.swift */; };
+		99F040C81BE5586A00A9497A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F040C71BE5586A00A9497A /* Alamofire.framework */; };
+		BB12F8A0A906DF0E59693622 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B75C7EFA4B2B34C606857AC /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +57,6 @@
 /* Begin PBXFileReference section */
 		1A05DD3954AD29C1A7548B76 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5D2D593470AC84EEECE7C49E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		62F54C3FA5C8BC66E6771501 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		99B8015C1BE4E8F500AF2A8B /* ecomhack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ecomhack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99B801601BE4E8F500AF2A8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		99B801621BE4E8F500AF2A8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,6 +92,13 @@
 		99F040B51BE52A3C00A9497A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		99F040B91BE5371600A9497A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		99F040BB1BE537A800A9497A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		99F040BD1BE5581000A9497A /* ecomhack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ecomhack-Bridging-Header.h"; sourceTree = "<group>"; };
+		99F040BE1BE5581000A9497A /* Carts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carts.swift; sourceTree = "<group>"; };
+		99F040BF1BE5581000A9497A /* CTPOAuthToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPOAuthToken.swift; sourceTree = "<group>"; };
+		99F040C01BE5581000A9497A /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		99F040C11BE5581000A9497A /* ProductProjections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductProjections.swift; sourceTree = "<group>"; };
+		99F040C71BE5586A00A9497A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		9B75C7EFA4B2B34C606857AC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +106,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F040C81BE5586A00A9497A /* Alamofire.framework in Frameworks */,
 				99F040BC1BE537A800A9497A /* Foundation.framework in Frameworks */,
 				99F040BA1BE5371600A9497A /* CoreLocation.framework in Frameworks */,
 				99F040941BE520B900A9497A /* MapKit.framework in Frameworks */,
-				797D72D7A7D733B7FA823D31 /* libPods.a in Frameworks */,
+				BB12F8A0A906DF0E59693622 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,10 +134,11 @@
 		43C81FA555075EF09B314B70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99F040C71BE5586A00A9497A /* Alamofire.framework */,
 				99F040BB1BE537A800A9497A /* Foundation.framework */,
 				99F040B91BE5371600A9497A /* CoreLocation.framework */,
 				99F040931BE520B900A9497A /* MapKit.framework */,
-				62F54C3FA5C8BC66E6771501 /* libPods.a */,
+				9B75C7EFA4B2B34C606857AC /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,6 +146,7 @@
 		99B801531BE4E8F500AF2A8B = {
 			isa = PBXGroup;
 			children = (
+				99F040C61BE5581800A9497A /* commercetools */,
 				99F040B31BE52A3C00A9497A /* Default-568h@2x.png */,
 				99F040B41BE52A3C00A9497A /* Default.png */,
 				99F040B51BE52A3C00A9497A /* Default@2x.png */,
@@ -142,6 +156,7 @@
 				99B8015D1BE4E8F500AF2A8B /* Products */,
 				AB653727ED4AF9939A47AF50 /* Pods */,
 				43C81FA555075EF09B314B70 /* Frameworks */,
+				99F040BD1BE5581000A9497A /* ecomhack-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,6 +239,17 @@
 				99F040AB1BE5273700A9497A /* x.png */,
 			);
 			name = Graphics;
+			sourceTree = "<group>";
+		};
+		99F040C61BE5581800A9497A /* commercetools */ = {
+			isa = PBXGroup;
+			children = (
+				99F040BE1BE5581000A9497A /* Carts.swift */,
+				99F040BF1BE5581000A9497A /* CTPOAuthToken.swift */,
+				99F040C01BE5581000A9497A /* Endpoint.swift */,
+				99F040C11BE5581000A9497A /* ProductProjections.swift */,
+			);
+			name = commercetools;
 			sourceTree = "<group>";
 		};
 		AB653727ED4AF9939A47AF50 /* Pods */ = {
@@ -427,7 +453,11 @@
 				99B801671BE4E8F500AF2A8B /* ViewController.m in Sources */,
 				99F040861BE50B1000A9497A /* ARView.m in Sources */,
 				99B801641BE4E8F500AF2A8B /* AppDelegate.m in Sources */,
+				99F040C21BE5581000A9497A /* Carts.swift in Sources */,
+				99F040C41BE5581000A9497A /* Endpoint.swift in Sources */,
 				99F0408D1BE50C9F00A9497A /* MyLocation.m in Sources */,
+				99F040C31BE5581000A9497A /* CTPOAuthToken.swift in Sources */,
+				99F040C51BE5581000A9497A /* ProductProjections.swift in Sources */,
 				99F040921BE5131600A9497A /* DBController.m in Sources */,
 				99B801611BE4E8F500AF2A8B /* main.m in Sources */,
 				99F0408F1BE50CD900A9497A /* DataController.m in Sources */,
@@ -561,14 +591,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D2D593470AC84EEECE7C49E /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = ecomhack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lauraluiz.ecomhack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ecomhack-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -576,14 +613,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1A05DD3954AD29C1A7548B76 /* Pods.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = ecomhack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lauraluiz.ecomhack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ecomhack-Bridging-Header.h";
 			};
 			name = Release;
 		};
