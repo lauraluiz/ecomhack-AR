@@ -95,6 +95,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"Prepare for Segue...");
     if ([[segue identifier] isEqualToString:@"showAR"]) {
+        NSLog(@"Equals showAR");
         ARView *arview = [segue destinationViewController];
         
         [arview setCurrentLoc:_mapView.userLocation.location];
@@ -165,6 +166,10 @@
                                                                        MAP_SPAN,
                                                                        MAP_SPAN);
     //[_mapView setRegion:[_mapView regionThatFits:viewRegion] animated:NO];
+    
+    if (arData == nil) {
+        [dataController getAllARObjects:_mapView.userLocation.location.coordinate];
+    }
     [UIView commitAnimations];
 }
 
@@ -189,6 +194,7 @@
     NSLog(@"Map view...");
     static NSString *identifier = @"MyLocation";
     if ([annotation isKindOfClass:[MyLocation class]]) {
+        NSLog(@"Correct");
         MKPinAnnotationView *annotationView = (MKPinAnnotationView *) [_mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
         if (annotationView == nil) {
             annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
@@ -201,6 +207,7 @@
         
         return annotationView;
     }
+    NSLog(@"Fail");
     return nil;
 }
 

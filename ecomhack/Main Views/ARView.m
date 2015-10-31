@@ -71,6 +71,7 @@
     NSLog(@"PRAR update frame...");
     [[self.view viewWithTag:AR_VIEW_TAG] setFrame:arViewFrame];
 }
+
 - (void)prarGotProblem:(NSString*)problemOrigin withDetails:(NSString*)details {
     NSLog(@"PRAR got problem...");
     [loadingI stopAnimating];
