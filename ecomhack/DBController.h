@@ -9,9 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+@protocol DBControllerDelegate
+- (void)gotNearData:(NSArray*)arObjects;
+- (void)gotAllData:(NSArray*)arObjects;
+
+- (void)gotUpdatedData;
+
+@end
+
 @interface DBController : NSObject;
 
--(NSArray*)getARObjectsNear:(CLLocation*)location;
--(NSArray*)getAllARObjectsAndSetupWithLoc:(CLLocation*)location;
+
+@property (weak, nonatomic) id <DBControllerDelegate> delegate;
+
+-(void)getARObjectsNear:(CLLocation*)location;
+-(void)getAllARObjectsAndSetupWithLoc:(CLLocation*)location;
 
 @end

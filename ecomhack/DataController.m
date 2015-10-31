@@ -34,7 +34,7 @@
 -(id)init {
     self = [super init];
     if (self) {        
-        dbController = [[DBController alloc] init];
+        self.dbController = [[DBController alloc] init];
     }
     return self;
 }
@@ -42,18 +42,16 @@
 #pragma mark - Data Callbacks
 
 -(void)passARObjectsToDelegateOnMainThread:(NSArray*)arObjects {
-    [self.delegate gotNearData:arObjects];
+    [self.dbController.delegate gotNearData:arObjects];
 }
 -(void)passAllARObjectsToDelegateOnMainThread:(NSArray*)arObjects {
-    [self.delegate gotAllData:arObjects];
+    [self.dbController.delegate gotAllData:arObjects];
 }
 
 -(void)getNearARObjects_IN_BACKGROUND:(CLLocation*)location {
-    NSArray *arObjects = [dbController getARObjectsNear:location];
-    if (!arObjects || arObjects == nil) return;
-    
-    [self.delegate gotNearData:arObjects];
+    [self.dbController getARObjectsNear:location];
 }
+
 -(void)getNearARObjects:(CLLocationCoordinate2D)coordinates {
     [self performSelectorInBackground:@selector(getNearARObjects_IN_BACKGROUND:)
                            withObject:[[CLLocation alloc] initWithLatitude:coordinates.latitude
@@ -61,11 +59,9 @@
 }
 
 -(void)getAllARObjects_IN_BACKGROUND:(CLLocation*)location {
-    NSArray *arObjects = [dbController getAllARObjectsAndSetupWithLoc:location];
-    if (!arObjects || arObjects == nil) return;
-    
-    [self.delegate gotAllData:arObjects];
+    [self.dbController getAllARObjectsAndSetupWithLoc:location];
 }
+
 -(void)getAllARObjects:(CLLocationCoordinate2D)coordinates {
     [self performSelectorInBackground:@selector(getAllARObjects_IN_BACKGROUND:)
                            withObject:[[CLLocation alloc] initWithLatitude:coordinates.latitude

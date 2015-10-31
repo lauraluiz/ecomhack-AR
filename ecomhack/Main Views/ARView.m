@@ -68,7 +68,6 @@
 
 
 - (void)prarUpdateFrame:(CGRect)arViewFrame {
-    NSLog(@"PRAR update frame...");
     [[self.view viewWithTag:AR_VIEW_TAG] setFrame:arViewFrame];
 }
 

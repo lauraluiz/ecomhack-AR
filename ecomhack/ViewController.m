@@ -67,7 +67,7 @@
     _mapView.showsUserLocation = YES;
     
     dataController = [[DataController alloc] init];
-    [dataController setDelegate:self];
+    [dataController.dbController setDelegate:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

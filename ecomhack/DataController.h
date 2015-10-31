@@ -31,19 +31,9 @@
 
 @class DataController;
 
-@protocol DataControllerDelegate
-- (void)gotNearData:(NSArray*)arObjects;
-- (void)gotAllData:(NSArray*)arObjects;
+@interface DataController : NSObject;
 
-- (void)gotUpdatedData;
-
-@end
-
-@interface DataController : NSObject {
-    DBController *dbController;
-}
-
-@property (weak, nonatomic) id <DataControllerDelegate> delegate;
+@property DBController *dbController;
 
 -(void)getNearARObjects:(CLLocationCoordinate2D)coordinates;
 -(void)getAllARObjects:(CLLocationCoordinate2D)coordinates;

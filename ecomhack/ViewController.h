@@ -10,8 +10,9 @@
 
 #import "ARView.h"
 #import "DataController.h"
+#import "DBController.h"
 
-@interface ViewController : UIViewController <ARViewDelegate, DataControllerDelegate, MKMapViewDelegate>
+@interface ViewController : UIViewController <ARViewDelegate, DBControllerDelegate, MKMapViewDelegate>
 {
     
     DataController *dataController;
