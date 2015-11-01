@@ -72,7 +72,6 @@
 }
 
 - (void)prarGotProblem:(NSString*)problemOrigin withDetails:(NSString*)details {
-    NSLog(@"PRAR got problem...");
     [loadingI stopAnimating];
     
     [self alert:problemOrigin withDetails:details];
@@ -82,6 +81,7 @@
 #pragma mark - View Management
 
 -(void)viewDidAppear:(BOOL)animated {
+    NSLog(@"ARView did appear");
     [super viewDidAppear:animated];
     
     [[PRARManager sharedManager] startARWithData:arData
@@ -89,6 +89,8 @@
                                                                             currentLoc.coordinate.longitude)];
 }
 -(void)viewWillDisappear:(BOOL)animated {
+    NSLog(@"ARView will disappear");
+
     [[PRARManager sharedManager] stopAR];
     
     [super viewWillDisappear:animated];
@@ -96,6 +98,7 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"ARView did load");
     
     [PRARManager sharedManagerWithRadarAndSize:self.view.frame.size andDelegate:self];
 }
@@ -104,7 +107,7 @@
 #pragma mark - Actions
 
 - (IBAction)done:(id)sender {
-    NSLog(@"Done...");
+    NSLog(@"Action done");
     [self.delegate arViewControllerDidFinish:self];
 }
 

@@ -32,39 +32,34 @@
 
 #pragma mark - Data callbacks
 
--(void)getARObjectsNear:(CLLocation*)location {
-    NSLog(@"Get objects near...");
-
-    if (!location || location == nil) return;
-    [self getCommercetoolsData];
-}
-
--(void)getAllARObjectsAndSetupWithLoc:(CLLocation*)location {
+-(void)getAllARObjectsAndSetup:(NSString*) email {
     NSLog(@"Get all objects...");
-    if (!location || location == nil) return;
-    [self getCommercetoolsData];
-}
 
--(void)getCommercetoolsData {
-    [ProductProjections searchObjc:nil completionBlock:^(NSDictionary* _Nonnull json) {
+    NSMutableDictionary *query = [NSMutableDictionary dictionary];
+    query[@"where"] = [NSString stringWithFormat:@"customerEmail = \"%@\"", email];
+    query[@"sort"] = @"lastModifiedAt desc";
+    NSLog(@"customerEmail = \"%@\"", email);
+    [Carts queryObjc:query completionBlock:^(NSDictionary* _Nonnull json) {
         NSMutableArray *arObjects = [[NSMutableArray alloc] init];
         
         NSUInteger i = 0;
-        for (id product in json[@"results"]) {
-            NSMutableDictionary *tempDict = [NSMutableDictionary dictionary];
-            tempDict[@"id"] = @(i);
-            tempDict[@"title"] = product[@"name"][@"en"];
-            for (id attribute in product[@"masterVariant"][@"attributes"]) {
-                if ([attribute[@"name"] isEqualToString:@"latitude"]) {
-                    tempDict[@"lat"] = attribute[@"value"];
+        if ([json[@"results"] count] > 0) {
+            for (id product in json[@"results"][0][@"lineItems"]) {
+                NSMutableDictionary *tempDict = [NSMutableDictionary dictionary];
+                tempDict[@"id"] = @(i);
+                tempDict[@"title"] = product[@"name"][@"en"];
+                for (id attribute in product[@"variant"][@"attributes"]) {
+                    if ([attribute[@"name"] isEqualToString:@"latitude"]) {
+                        tempDict[@"lat"] = attribute[@"value"];
+                    }
+                    if ([attribute[@"name"] isEqualToString:@"longitude"]) {
+                        tempDict[@"lon"] = attribute[@"value"];
+                    }
                 }
-                if ([attribute[@"name"] isEqualToString:@"longitude"]) {
-                    tempDict[@"lon"] = attribute[@"value"];
-                }
+                NSLog(@"%@", tempDict);
+                [arObjects addObject:tempDict];
+                i++;
             }
-            NSLog(@"%@", tempDict);
-            [arObjects addObject:tempDict];
-            i++;
         }
         
         [self.delegate gotAllData:arObjects];

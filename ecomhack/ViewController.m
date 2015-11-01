@@ -54,7 +54,7 @@
 #pragma mark - View Management
 
 - (void)viewDidLoad {
-    NSLog(@"Did load...");
+    NSLog(@"ViewController did load");
     [super viewDidLoad];
     
     self.locationManager = [[CLLocationManager alloc] init];
@@ -71,8 +71,10 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    NSLog(@"Did appear...");
+    NSLog(@"ViewController did appear");
     [super viewDidAppear:animated];
+    
+    [self askForEmail: dataController];
     
     locRefreshTimer = [NSTimer scheduledTimerWithTimeInterval: LOC_REFRESH_TIMER
                                                        target: self
@@ -82,8 +84,43 @@
     
     [self performSelector:@selector(setMapToUserLocation) withObject:nil afterDelay:1];
 }
+
+- (void)askForEmail:(DataController*)controller {
+    __block UITextField *localTextField;
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Email" message:@"Enter your email:" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField)
+     {
+         textField.placeholder = @"Email";
+         textField.text = @"laura@email.com";
+         localTextField = textField;
+     }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction
+                                   actionWithTitle:@"Cancel"
+                                   style:UIAlertActionStyleCancel
+                                   handler:^(UIAlertAction *action)
+                                   {
+                                       NSLog(@"Cancel action");
+                                   }];
+    
+    UIAlertAction *okAction = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction *action)
+                               {
+                                   NSLog(@"Customer email: %@", localTextField.text);
+                                   [controller getAllARObjects:localTextField.text];
+                               }];
+    
+    [alert addAction:cancelAction];
+    [alert addAction:okAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
-    NSLog(@"Will disappear...");
+    NSLog(@"ViewController will disappear");
     [super viewWillDisappear:animated];
     
     [locRefreshTimer invalidate];
@@ -95,7 +132,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"Prepare for Segue...");
     if ([[segue identifier] isEqualToString:@"showAR"]) {
-        NSLog(@"Equals showAR");
         ARView *arview = [segue destinationViewController];
         
         [arview setCurrentLoc:_mapView.userLocation.location];
@@ -104,7 +140,7 @@
     }
 }
 - (void)arViewControllerDidFinish:(ARView *)controller {
-    NSLog(@"Did finish...");
+    NSLog(@"AR ViewController did finish");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -121,25 +157,11 @@
             [self performSelector:@selector(startPRAR:) withObject:sender afterDelay:1];
             return;
         }
-        
-        [statusL setText:@"Building data"];
-        [dataController getNearARObjects:_mapView.userLocation.location.coordinate];
     }
 }
 
-- (void)gotNearData:(NSArray*)arObjects {
-    NSLog(@"Got near data...");
-    arData = [[NSArray alloc] initWithArray:arObjects];
-    [statusL setText:@"Got Near Data"];
-    
-    [loadingI stopAnimating];
-    [arB setEnabled:YES];
-    
-    [self plotAllPlaces];
-}
-
 - (void)gotAllData:(NSArray*)arObjects {
-    NSLog(@"Got all data...");
+    NSLog(@"Got all data!");
     arData = [[NSArray alloc] initWithArray:arObjects];
     [statusL setText:@"Got All Data"];
     
@@ -150,7 +172,7 @@
 }
 
 - (void)gotUpdatedData {
-    NSLog(@"Got updated");
+    NSLog(@"Got updated data");
 }
 
 
@@ -165,22 +187,19 @@
                                                                                                   _mapView.userLocation.location.coordinate.longitude),
                                                                        MAP_SPAN,
                                                                        MAP_SPAN);
-    //[_mapView setRegion:[_mapView regionThatFits:viewRegion] animated:NO];
+    [_mapView setRegion:[_mapView regionThatFits:viewRegion] animated:NO];
     
-    if (arData == nil) {
-        [dataController getAllARObjects:_mapView.userLocation.location.coordinate];
-    }
     [UIView commitAnimations];
 }
 
 -(void)plotAllPlaces {
-    NSLog(@"Plot all places...");
+    NSLog(@"Plotting all places...");
     for (NSDictionary *place in arData) {
         [self plotPlace:place andId:[place[@"nid"] integerValue]];
     }
 }
 -(void)plotPlace:(NSDictionary*)somePlace andId:(NSInteger)nid {
-    NSLog(@"Plot place...");
+    NSLog(@"Plot place");
     NSString *arObjectName = somePlace[@"title"];
     
     CLLocationCoordinate2D coordinates;
@@ -191,10 +210,9 @@
 }
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
-    NSLog(@"Map view...");
+    NSLog(@"Calling MapView...");
     static NSString *identifier = @"MyLocation";
     if ([annotation isKindOfClass:[MyLocation class]]) {
-        NSLog(@"Correct");
         MKPinAnnotationView *annotationView = (MKPinAnnotationView *) [_mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
         if (annotationView == nil) {
             annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
@@ -207,7 +225,6 @@
         
         return annotationView;
     }
-    NSLog(@"Fail");
     return nil;
 }
 

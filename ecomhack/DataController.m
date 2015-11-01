@@ -41,31 +41,12 @@
 
 #pragma mark - Data Callbacks
 
--(void)passARObjectsToDelegateOnMainThread:(NSArray*)arObjects {
-    [self.dbController.delegate gotNearData:arObjects];
-}
 -(void)passAllARObjectsToDelegateOnMainThread:(NSArray*)arObjects {
     [self.dbController.delegate gotAllData:arObjects];
 }
 
--(void)getNearARObjects_IN_BACKGROUND:(CLLocation*)location {
-    [self.dbController getARObjectsNear:location];
-}
-
--(void)getNearARObjects:(CLLocationCoordinate2D)coordinates {
-    [self performSelectorInBackground:@selector(getNearARObjects_IN_BACKGROUND:)
-                           withObject:[[CLLocation alloc] initWithLatitude:coordinates.latitude
-                                                                 longitude:coordinates.longitude]];
-}
-
--(void)getAllARObjects_IN_BACKGROUND:(CLLocation*)location {
-    [self.dbController getAllARObjectsAndSetupWithLoc:location];
-}
-
--(void)getAllARObjects:(CLLocationCoordinate2D)coordinates {
-    [self performSelectorInBackground:@selector(getAllARObjects_IN_BACKGROUND:)
-                           withObject:[[CLLocation alloc] initWithLatitude:coordinates.latitude
-                                                                 longitude:coordinates.longitude]];
+-(void)getAllARObjects:(NSString*) email {
+    [self.dbController getAllARObjectsAndSetup: email];
 }
 
 @end

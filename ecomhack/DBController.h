@@ -10,7 +10,6 @@
 #import <CoreLocation/CoreLocation.h>
 
 @protocol DBControllerDelegate
-- (void)gotNearData:(NSArray*)arObjects;
 - (void)gotAllData:(NSArray*)arObjects;
 
 - (void)gotUpdatedData;
@@ -22,7 +21,6 @@
 
 @property (weak, nonatomic) id <DBControllerDelegate> delegate;
 
--(void)getARObjectsNear:(CLLocation*)location;
--(void)getAllARObjectsAndSetupWithLoc:(CLLocation*)location;
+-(void)getAllARObjectsAndSetup:(NSString*) email;
 
 @end

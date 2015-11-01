@@ -35,7 +35,6 @@
 
 @property DBController *dbController;
 
--(void)getNearARObjects:(CLLocationCoordinate2D)coordinates;
--(void)getAllARObjects:(CLLocationCoordinate2D)coordinates;
+-(void)getAllARObjects:(NSString*) email;
 
 @end

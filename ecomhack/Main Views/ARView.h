@@ -45,7 +45,7 @@
     IBOutlet UIActivityIndicatorView *loadingI;
 }
 
-@property (weak, nonatomic) id <ARViewDelegate> delegate;
+@property id <ARViewDelegate> delegate;
 
 @property (strong, nonatomic) NSArray *arData;
 @property (strong, nonatomic) CLLocation *currentLoc;

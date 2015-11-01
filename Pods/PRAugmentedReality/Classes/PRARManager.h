@@ -73,7 +73,7 @@
     NSTimer *refreshTimer;
 }
 
-@property (weak, nonatomic) id <PRARManagerDelegate> delegate;
+@property (strong, nonatomic) id <PRARManagerDelegate> delegate;
 
 + (id)sharedManager;
 + (id)sharedManagerWithSize:(CGSize)size andDelegate:(id)theDelegate;

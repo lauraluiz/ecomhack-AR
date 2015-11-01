@@ -14,7 +14,6 @@
 
 @interface ViewController : UIViewController <ARViewDelegate, DBControllerDelegate, MKMapViewDelegate>
 {
-    
     DataController *dataController;
     IBOutlet MKMapView *_mapView;
     
@@ -29,8 +28,6 @@
     NSTimer *locRefreshTimer;
 }
 
-
 -(IBAction)startPRAR:(id)sender;
-
 
 @end
